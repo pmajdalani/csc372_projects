@@ -2,48 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing - Bucket Boys Limited</title>
-    <link rel="stylesheet" href="css/clothing.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clothing.css" rel="stylesheet">
 </head>
 <body>
-    <img src="images/bucketBoysLogo2.png" alt="bucketBoysLogo">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="clothing.html">Clothing</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="stickers.html">Stickers</a></li>
-            </ul>
-        </nav>
-    <div class="container">
+    <div class="container text-center my-4">
+        <img src="images/bucketBoysLogo2.png" alt="Bucket Boys Logo" class="img-fluid" width="200">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Bucket Boys</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="clothing.html">Clothing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stickers.html">Stickers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
         <h1>Clothing</h1>
-        <div class="grid">
-            <div class="item">
-                <img src="images/bucketBoysHoodieFront.png" alt="Bucket Boys Hoodie Front">
-                <img src="images/bucketBoysHoodieBack.png" alt="Bucket Boys Hoodie Back">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <img src="images/bucketBoysHoodieFront.png" class="img-fluid rounded" alt="Hoodie Front">
+                <img src="images/bucketBoysHoodieBack.png" class="img-fluid rounded mt-2" alt="Hoodie Back">
                 <h2>Hoodie</h2>
-                <p>Comfortable and stylish hoodie for any occasion</p>
+                <p>Comfortable and stylish hoodie for any occasion.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketBoysTshirtFront.png" alt="Bucket Boys T-Shirt Front">
-                <img src="images/bucketboysTshirtBack.png" alt="Bucket Boys T-Shirt Back">
+            <div class="col-md-6">
+                <img src="images/bucketBoysTshirtFront.png" class="img-fluid rounded" alt="T-Shirt Front">
+                <img src="images/bucketBoysTshirtBack.png" class="img-fluid rounded mt-2" alt="T-Shirt Back">
                 <h2>T-Shirt</h2>
-                <p>Classic t-shirt with premium quality fabric</p>
+                <p>Classic t-shirt with premium quality fabric.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketBoysSweaterFront.png" alt="Bucket Boys Sweater Front">
-                <img src="images/bucketBoysSweaterBack.png" alt="Bucket Boys Sweater Back">
+            <div class="col-md-6">
+                <img src="images/bucketBoysSweaterFront.png" class="img-fluid rounded" alt="Sweater Front">
+                <img src="images/bucketBoysSweaterBack.png" class="img-fluid rounded mt-2" alt="Sweater Back">
                 <h2>Sweater</h2>
-                <p>A stylish sweater that completes any outfit</p>
+                <p>Classic sweater with premium quality fabric.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketBoysJacketFront.png" alt="Bucket Boys Jacket Front">
-                <img src="images/bucketBoysJacketBack.png" alt="Bucket Boys Jacket Back">
+            <div class="col-md-6">
+                <img src="images/bucketBoysJacketFront.png" class="img-fluid rounded" alt="Jacket Front">
+                <img src="images/bucketBoysJacketBack.png" class="img-fluid rounded mt-2" alt="Jacket Back">
                 <h2>Jacket</h2>
-                <p>Durable and trendy jacket perfect for any style</p>
+                <p>Classic jacket with premium quality fabric.</p>
             </div>
         </div>
     </div>
+
+    <footer class="bg-warning text-dark text-center py-3 mt-5">
+        <p>Developer: Peter Majdalani</p>
+        <p>Contact: <a href="mailto:pmajdalani@uri.edu" class="text-dark fw-bold">pmajdalani@uri.edu</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

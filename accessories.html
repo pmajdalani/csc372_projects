@@ -2,44 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessories - Bucket Boys Limited</title>
-    <link rel="stylesheet" href="css/accessories.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/accessories.css" rel="stylesheet">
 </head>
 <body>
-    <img src="images/bucketBoysLogo2.png" alt="bucketBoysLogo">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="clothing.html">Clothing</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="stickers.html">Stickers</a></li>
-            </ul>
-        </nav>
-    <div class="container">
+    <div class="container text-center my-4">
+        <img src="images/bucketBoysLogo2.png" alt="Bucket Boys Logo" class="img-fluid" width="200">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Bucket Boys</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="clothing.html">Clothing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stickers.html">Stickers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
         <h1>Accessories</h1>
-        <div class="grid">
-            <div class="item">
-                <img src="images/bucketBoysCap.png" alt="Bucket Boys Cap">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <img src="images/bucketBoysCap.png" class="img-fluid rounded" alt="Bucket Boys Cap">
                 <h2>Cap</h2>
-                <p>A classic premium made Bucket Boys cap to keep the sun out of your eyes</p>
+                <p>A classic premium-made Bucket Boys cap to keep the sun out of your eyes.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketBoysBeanie.png" alt="Bucket Boys Beanie">
+            <div class="col-md-6">
+                <img src="images/bucketBoysBeanie.png" class="img-fluid rounded" alt="Bucket Boys Beanie">
                 <h2>Beanie</h2>
-                <p>A Beanie that shows off the true style of Bucket Boys Limited</p>
+                <p>A beanie that shows off the true style of Bucket Boys Limited.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketboysWaterBottle.png" alt="Bucket Boys Water Bottle">
+            <div class="col-md-6">
+                <img src="images/bucketboysWaterBottle.png" class="img-fluid rounded" alt="Bucket Boys Water Bottle">
                 <h2>Water Bottle</h2>
-                <p>Stylish water bottle so that you can stay hydrated while repping the Bucket Boys Style</p>
+                <p>Stylish water bottle so that you can stay hydrated while repping the Bucket Boys Style.</p>
             </div>
-            <div class="item">
-                <img src="images/bucketBoysToteBag.png" alt="Bucket Boys Tote Bag">
+            <div class="col-md-6">
+                <img src="images/bucketBoysToteBag.png" class="img-fluid rounded" alt="Bucket Boys Tote Bag">
                 <h2>Tote Bag</h2>
-                <p>Durable, premium quality Tote bag that shows off the Bucket Boys Style</p>
+                <p>Durable, premium-quality tote bag that shows off the Bucket Boys Style.</p>
             </div>
         </div>
     </div>
+
+    <footer class="bg-warning text-dark text-center py-3 mt-5">
+        <p>Developer: Peter Majdalani</p>
+        <p>Contact: <a href="mailto:pmajdalani@uri.edu" class="text-dark fw-bold">pmajdalani@uri.edu</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
