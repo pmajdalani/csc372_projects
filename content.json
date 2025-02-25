@@ -1,0 +1,22 @@
+{
+    "style": {
+        "description": "Bucket Boys Limited represents bold streetwear culture with urban aesthetics and high-quality craftsmanship. Our designs stand out through oversized silhouettes, statement graphics, and authentic self-expression."
+    },
+    "products": [
+        {
+            "name": "Bucket Boys Hoodie",
+            "description": "Stay warm and stylish with our premium hoodie, featuring a modern oversized fit and durable fabric.",
+            "image": "images/product1.jpg"
+        },
+        {
+            "name": "Classic Streetwear Cap",
+            "description": "A must-have cap with an embroidered logo, designed for comfort and urban appeal.",
+            "image": "images/product2.jpg"
+        },
+        {
+            "name": "Signature Logo Tee",
+            "description": "Rock the Bucket Boys brand with our high-quality cotton tee, available in multiple colors.",
+            "image": "images/product3.jpg"
+        }
+    ]
+}
