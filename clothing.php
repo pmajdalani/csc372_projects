@@ -32,6 +32,7 @@
         <h1>Clothing</h1>
         <div class="row g-4">
             <?php
+            // List of products with associated values
             $products = [
                 ["name" => "Hoodie", "imageFront" => "images/bucketBoysHoodieFront.png", "imageBack" => "images/bucketBoysHoodieBack.png", "price" => 45.00],
                 ["name" => "T-Shirt", "imageFront" => "images/bucketBoysTshirtFront.png", "imageBack" => "images/bucketboysTshirtBack.png", "price" => 25.00],
