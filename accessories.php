@@ -32,6 +32,7 @@
         <h1>Accessories</h1> 
         <div class="row g-4">
             <?php
+            // List of products with associated values
             $products = [
                 ["name" => "Cap", "image" => "images/bucketBoysCap.png", "description" => "A classic premium-made Bucket Boys cap to keep the sun out of your eyes.", "price" => 20.00],
                 ["name" => "Beanie", "image" => "images/bucketBoysBeanie.png", "description" => "A beanie that shows off the true style of Bucket Boys Limited.", "price" => 18.00],

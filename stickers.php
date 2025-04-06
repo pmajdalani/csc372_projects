@@ -32,6 +32,7 @@
         <h1>Stickers</h1>
         <div class="row g-4">
             <?php
+            // List of products with associated values
             $products = [
                 ["name" => "Sticker 1", "image" => "images/bucketBoysSticker1.png", "description" => "High-quality vinyl sticker with the Bucket Boys branding.", "price" => 5.00],
                 ["name" => "Sticker 2", "image" => "images/bucketBoysSticker2.png", "description" => "Durable and waterproof sticker for your gear.", "price" => 5.00],
