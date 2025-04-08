@@ -1,3 +1,71 @@
+<?php
+session_start();
+
+include __DIR__ . '/validation.php';
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: index.php");
+    exit();
+}
+
+
+$formData = [
+    'name' => '',
+    'age' => '',
+    'style' => ''
+];
+
+$errors = [
+    'name' => '',
+    'age' => '',
+    'style' => ''
+];
+
+$message = '';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Sanitize input
+    $formData['name'] = $_POST['name'] ?? '';
+    $formData['age'] = $_POST['age'] ?? '';
+    $formData['style'] = $_POST['style'] ?? '';
+
+    // Validate name
+    if (!isValidText($formData['name'])) {
+        $errors['name'] = "Name must be between 2 and 50 characters.";
+    }
+
+    // Validate age
+    if (!isValidNumber($formData['age'], 10, 100)) {
+        $errors['age'] = "Age must be a number between 10 and 100.";
+    }
+
+    // Validate style
+    if (!isValidStyle($formData['style'])) {
+        $errors['style'] = "Please select a valid clothing style.";
+    }
+
+    // Check if any errors exist
+    $allErrors = implode('', $errors);
+    if (empty($allErrors)) {
+        $message = "Thank you! Your form has been submitted successfully.";
+    } else {
+        $message = "Please correct the errors in the form.";
+    }
+}
+
+
+// Set cookie if data is valid
+if (empty($allErrors)) {
+    // Set cookie to remember name for 7 days
+    setcookie('visitor_name', $formData['name'], time() + (86400 * 7)); // 86400 = 1 day
+    $_SESSION['fav_style'] = $formData['style'];
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +96,20 @@
         </div>
     </nav>
 
+    
+
     <div class="container text-center my-5">
         <h2>Welcome to Bucket Boys Limited</h2>
         <p class="lead">A streetwear brand blending bold, stylish designs.</p>
     </div>
+
+    <p><a href="index.php?logout=1">Clear Session</a></p>
+
+
+    <h1>Get in Touch With Bucket Boys</h1>
+    <p>Fill out this form to stay up to date with our drops and style tips!</p>
+
+    <?php include 'form.php'; ?>
 
     <footer class="bg-warning text-dark text-center py-3 mt-5">
         <p>Developer: Peter Majdalani</p>
@@ -42,4 +120,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/loadContent.js"></script>
 </body>
-</ht
+<?php if (isset($_COOKIE['visitor_name'])): ?>
+    <p>👋 Welcome back, <?= htmlspecialchars($_COOKIE['visitor_name']) ?>!</p>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['fav_style'])): ?>
+    <p>Your favorite style is: <?= htmlspecialchars($_SESSION['fav_style']) ?></p>
+<?php endif; ?>
+
+</html>
